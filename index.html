@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsraelCraft AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="brand">IsraelCraft AI</span>
+        <button id="profileBtn">Profile</button>
+    </nav>
+    <main id="main-content">
+        <!-- Home Page -->
+        <section id="home-section" class="page-section active">
+            <h1>Welcome to IsraelCraft AI</h1>
+            <p>
+                Create professional backgrounds and product designs easily.<br>
+                <strong>How it works:</strong>
+            </p>
+            <ol class="instructions">
+                <li>Upload your product photo.</li>
+                <li>Choose a background style or type your own prompt.</li>
+                <li>Generate a new scene with AI.</li>
+                <li>Download, edit, undo, or share your image.</li>
+                <li>Start over or visit your profile anytime.</li>
+            </ol>
+            <button id="uploadBtn">Upload Image</button>
+        </section>
+        <!-- Upload Page -->
+        <section id="upload-section" class="page-section">
+            <h2>Upload your image</h2>
+            <p>Choose a photo of your product or item. Supported formats: PNG, JPG, JPEG.</p>
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="uploadedImagePreview"></div>
+            <button id="toPromptBtn">Next: Choose Prompt</button>
+        </section>
+        <!-- Prompt Selection Page -->
+        <section id="prompt-section" class="page-section">
+            <h2>Choose a background or product style</h2>
+            <p>Select a preset style or type your own prompt for the AI to use.</p>
+            <div id="promptList">
+                <button class="prompt-btn" data-prompt="Pink Christmas background">Pink Christmas background</button>
+                <button class="prompt-btn" data-prompt="Jewelry product display">Jewelry product display</button>
+                <button class="prompt-btn" data-prompt="Clothes display">Clothes display</button>
+            </div>
+            <div id="selectedPromptDetails" class="prompt-details"></div>
+            <input type="text" id="customPrompt" placeholder="Or type your own prompt...">
+            <button id="toGenerateBtn">Generate Scene</button>
+        </section>
+        <!-- Result Page -->
+        <section id="result-section" class="page-section">
+            <h2>Generated Image</h2>
+            <p>Your new image is shown below. You can download, edit, undo, share, or start over.</p>
+            <div id="resultImagePreview"></div>
+            <button id="downloadBtn">Download Image</button>
+            <input type="text" id="editPrompt" placeholder="Edit image by text prompt...">
+            <button id="editBtn">Edit Image</button>
+            <button id="showOriginalBtn">Show Original</button>
+            <button id="undoBtn">Undo</button>
+            <button id="shareBtn">Share</button>
+            <button id="helpBtn">Help</button>
+            <button id="resetBtn">Start Over</button>
+            <button id="backHomeBtn">Back to Home</button>
+        </section>
+        <!-- Profile Page -->
+        <section id="profile-section" class="page-section">
+            <h2>Your Profile</h2>
+            <div class="profile-info">
+                <p><strong>Name:</strong> Guest User</p>
+                <p><strong>Images Created:</strong> <span id="profileImageCount">0</span></p>
+                <p><strong>Tips:</strong></p>
+                <ul>
+                    <li>Try different prompts for unique results.</li>
+                    <li>Use the edit feature to refine your image.</li>
+                    <li>Share your creations with friends!</li>
+                </ul>
+            </div>
+            <button id="backHomeBtnProfile">Back to Home</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
