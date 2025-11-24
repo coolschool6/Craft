@@ -93,7 +93,7 @@ toGenerateBtn && toGenerateBtn.addEventListener('click', () => {
 // NOTE: This is a browser adaptation, not Node.js. Node.js code cannot run in browser directly.
 // For browser, use fetch to call Gemini API endpoint.
 
-const GEMINI_API_KEY = "AIzaSyBJeSZ60_Y2yEhreqV-4oi40Qjm-uRBtCk";
+const GEMINI_API_KEY = "AIzaSyDN9pGlTLosJH062lH-xOyueKWv1w5UzAY";
 
 async function callGeminiAPI(imageBase64, promptText) {
     // Gemini API endpoint for browser (v1beta)
